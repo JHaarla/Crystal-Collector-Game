@@ -39,10 +39,10 @@ totalNumberText.text(yourTotal);
 
 
 console.log("goalNumber= " + goalNumber);
-console.log("Crystal 0 value is " + crystal0Value)
-console.log("Crystal 1 value is " + crystal1Value)
-console.log("Crystal 2 value is " + crystal2Value)
-console.log("Crystal 3 value is " + crystal3Value)
+// console.log("Crystal 0 value is " + crystal0Value)
+// console.log("Crystal 1 value is " + crystal1Value)
+// console.log("Crystal 2 value is " + crystal2Value)
+// console.log("Crystal 3 value is " + crystal3Value)
 
 // Create crystals for each index in crystalValues array and create a <img> tag with class="crystal-image" and crystal-value-data set to crystalValues[i]. Then, push to the DOM (our original empty crystal-container in the HTML) via .append. whew! :) 
 for (var i = 0; i < crystalValues.length; i++) {
@@ -55,15 +55,15 @@ for (var i = 0; i < crystalValues.length; i++) {
 }
 
 // click event to trigger the next action(s). Also, this event listens to ALL crystals on the page (because they all have the same class...)
-$("crystal-image").on("click", function(){
+$(".crystal-image").on("click", function(){
     //
     var crystalValue = ($(this).attr("crystal-value-data"));
     crystalValue = parseInt(crystalValue);
-
+    console.log("clicked crystal Value= " + crystalValue);
     //
     yourTotal += crystalValue;
-
-    $("#your")
+    console.log("your Total= " + yourTotal);
+    $("#yourTotal").text(yourTotal);
 })
 
 
