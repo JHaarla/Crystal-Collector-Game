@@ -23,19 +23,19 @@ var losses = 0;
 var crystalValues = [setCrystal(), setCrystal(), setCrystal(), setCrystal()]
 console.log("crystal values array: " + crystalValues);
 
-var winsText = document.getElementById("winsAmount");
-var lossesText = document.getElementById("lossesAmount");
+var winsText = $("#winsAmount");
+var lossesText = $("#lossesAmount");
 var goalNumberText = $("#goalNumber");
-// var totalNumberText = document.getElementById("yourTotal");
+var totalNumberText = $("#yourTotal");
 
 // reset(); //runs the reset function to initialize the game or to reset it after a win or loss
 
 
 // diplays wins, losses, goal number and user total 
-winsText.textContent = wins;
-lossesText.textContent = losses;
+winsText.text(wins);
+lossesText.text(losses);
 goalNumberText.text(goalNumber);
-totalNumberText.textContent = yourTotal;
+totalNumberText.text(yourTotal);
 
 
 console.log("goalNumber= " + goalNumber);
