@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Crystal Collector</title>
+    <!-- <link rel="stylesheet" type="text/css" href="assets/css/reset.css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="assets/javascript/game.js"></script>
+</head>
+<body class="pagebg text-center">
+
+    <!-- container for game title -->
+    <div class="title">
+        <h1>Crystal Collector</h1>
+    </div>
+
+    <!-- container for instructions -->
+    <div class="instructions">
+        <h3>Instructions</h3>
+        <p>You will be given a random number at the start of the game.</p>
+        <p>There are four crystals below. By clicking on a crystal, you will add a specific amount of points to your total.</p>
+        <p>You win the game by matching your total score to the given goal number. You lose if your total goes over the the goal number.</p>
+        <p>The value of each crystal is hidden from you until you click on it.</p>
+        <p>Each time the game starts, a new goal number is given and the value of the crystals will change!</p>
+        <p>Good Luck!!</p>
+    </div>
+
+    <!-- Container for the Goal Number -->
+    <div class="goal">Number to match: <br>
+        <span id="goalNumber"></span>
+    </div>
+
+    <!-- Container for Your Total number -->
+    <div class="total">Your total: <br>
+        <span id="yourTotal"></span>
+    </div>
+
+    <!-- Container for crystal images -->
+    <div class="crystalContainer">
+        <img id="Crystal0" src="assets/images/crystal-0.png">
+        <img id="Crystal1" src="assets/images/crystal-1.png">
+        <img id="Crystal2" src="assets/images/crystal-2.png">
+        <img id="Crystal3" src="assets/images/crystal-3.png">
+
+    </div>
+
+    <!-- container for wins -->
+    <div class="winsContainer">
+        Wins: <span id="winsAmount"></span>
+    </div>
+
+    <!-- container for losses -->
+    <div class="lossesContainer">
+        Losses: <span id="lossesAmount"></span>
+    </div>
+
+
+</body>
+</html>
