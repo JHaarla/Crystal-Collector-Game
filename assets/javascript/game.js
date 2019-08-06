@@ -15,8 +15,6 @@ var crystal3Value;
 var goalNumber = setGoal();
 var yourTotal = 0;
 
-var totalCounter = 0;
-
 var wins = 0;
 var losses = 0;
 
@@ -64,7 +62,14 @@ $(".crystal-image").on("click", function(){
     yourTotal += crystalValue;
     console.log("your Total= " + yourTotal);
     $("#yourTotal").text(yourTotal);
-})
+
+    if (yourTotal === goalNumber) {
+        alert("You WIN!!!");
+    } else if (yourTotal >= goalNumber) {
+        alert("You LOSE!!!");
+    };
+    });
+
 
 
 // function to set goalNumber to a random value between 19 and 120
