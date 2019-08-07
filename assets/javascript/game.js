@@ -26,8 +26,6 @@ $(document).ready(function() {
     var goalNumberText = $("#goalNumber");
     var totalNumberText = $("#yourTotal");
 
-    // reset(); //runs the reset function to initialize the game or to reset it after a win or loss
-
 
     // diplays wins, losses, goal number and user total 
     winsText.text(wins);
@@ -66,6 +64,8 @@ $(document).ready(function() {
 
     demCrystals();
 
+
+    // animation effect for the crystal images on hover
     $(".crystal-image").hover(
         function() { $(this).addClass("animated pulse") },
         function() { $(this).removeClass("animated pulse")}    
@@ -79,8 +79,9 @@ $(document).ready(function() {
 
     // });
 
+// __________reset section - it's a mess in here ________________________
 
-    function reset() {
+    function reset() { //OG__________________________
         // crystal0Value = setCrystal0();
         // crystal1Value = setCrystal1();
         // crystal2Value = setCrystal2();
@@ -109,17 +110,39 @@ $(document).ready(function() {
         // }
         demCrystals();
         
-
-        
-
-        
-
     };
 
 
+    // function reset() { //V2____________________________
+
+    //     crystalValues = [setCrystal(), setCrystal(), setCrystal(), setCrystal()];
+       
+    //     $("#crystal-container").empty();
+
+    //     for (var i = 0; i < crystalValues.length; i++) {
+
+    //         var crystalImage = $("<img>");
+    //         crystalImage.addClass("crystal-image");
+    //         crystalImage.attr("src", ("assets/images/crystal-" + [i] + ".png"));
+    //         crystalImage.attr("crystal-value-data", crystalValues[i]);
+    //         $("#crystal-container").append(crystalImage);
+    //     }
+
+    //     yourTotal = 0;
+    //     totalNumberText.text(yourTotal);
+
+    //     goalNumber = setGoal();
+    //     goalNumberText.text(goalNumber);
+
+    //     console.log("reset goal: " + goalNumber);
+        
+    // };
 
 
 
+
+
+// __________ end of reset section ________________________
 
 
     // click event to trigger the next action(s). Also, this event listens to ALL crystals on the page (because they all have the same class...)
@@ -173,14 +196,5 @@ $(document).ready(function() {
 
     // reset function - runs at the beginning and every time the player wins or loses
 
-
-
-
-    // reset(); //runs the reset function to initialize the game or to reset it after a win or loss
-    // console.log("goalNumber= " + goalNumber);
-    // console.log("Crystal 0 value is " + crystal0Value)
-    // console.log("Crystal 1 value is " + crystal1Value)
-    // console.log("Crystal 2 value is " + crystal2Value)
-    // console.log("Crystal 3 value is " + crystal3Value)
 
 }); // *fin* do not delete
