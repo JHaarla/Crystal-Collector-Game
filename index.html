@@ -15,39 +15,101 @@
 <body class="pagebg text-center">
 
     <!-- container for game title -->
-    <div class="title">
-        <h1>Crystal Collector</h1>
-    </div>
+    <div class="container">   
+        <div class="row">   
+            <div class="col-lg-6 offset-lg-3">
+                <div class="card">
+                    <div class="card-body">
+                                <div class="title">
+                                    <h1>Crystal Collector</h1>
+                                </div>
+                    </div>
+                </div>
+            </div> 
+        </div>  
+    </div>   
 
     <!-- container for instructions -->
-    <div class="instructions">
-        <h3>Instructions</h3>
-        <p>You will be given a random number at the start of the game.</p>
-        <p>There are four crystals below. By clicking on a crystal, you will add a specific amount of points to your total.</p>
-        <p>You win the game by matching your total score to the given goal number. You lose if your total goes over the the goal number.</p>
-        <p>The value of each crystal is hidden from you until you click on it.</p>
-        <p>Each time the game starts, a new goal number is given and the value of the crystals will change!</p>
-        <p>Good Luck!!</p>
-    </div>
+    <div class="container">   
+        <div class="row">   
+            <div class="col-lg-6 offset-lg-3">
+                <div class="card">
+                    <div class="card-body">
+    
+                        <div class="instructions-container">
+                            <!-- <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#collapseThis">Hide/Show Instructions</button>
+                                <div id="collapseThis" class="collapse"> -->
+                                <div>
+                                    <h3>Instructions</h3>
+                                    <p>You will be given a random number at the start of the game.</p>
+                                    <p>There are four crystals below. By clicking on a crystal, you will add a specific amount of points to your total.</p>
+                                    <p>You win the game by matching your total score to the given goal number. You lose if your total goes over the the goal number.</p>
+                                    <p>The value of each crystal is hidden from you until you click on it.</p>
+                                    <p>Each time the game starts, a new goal number is given and the value of the crystals will change!</p>
+                                    <p><strong>Good Luck!!</strong></p>
+                                </div>
+                                
+                            
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>  
+    </div>   
+        
 
     <!-- Container for the Goal Number -->
-    <div class="goal">Number to match: <br>
-        <span id="goalNumber"></span>
-    </div>
+    <div class="container">   
+        <div class="row">   
+            <div class="col-lg-6 offset-lg-3">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <h5 class="goal card-header">Number to match: </h5>
+                                <div class="card-body">
+                                    <h3 id="goalNumber"></h3>
+                                </div>
+                        </div>
+                    </div>
 
-    <!-- Container for Your Total number -->
-    <div class="total">Your total: <br>
-        <span id="yourTotal"></span>
-    </div>
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <h5 class="total card-header">Your total:</h5>
+                                <div class="card-body">
+                                    <h3 id="yourTotal"></h3>
+                                </div>
+                        </div>
+                    </div>
+
+                </div>                                  
+            </div>                                 
+        </div>
+    </div>  
+
 
     <!-- Container for crystal images -->
-    <div id="crystal-container">
-        <!-- <img id="Crystal0" src="assets/images/crystal-0.png">
-        <img id="Crystal1" src="assets/images/crystal-1.png">
-        <img id="Crystal2" src="assets/images/crystal-2.png">
-        <img id="Crystal3" src="assets/images/crystal-3.png"> -->
+    <div class="container">   
+        <div class="row">   
+            <div class="col-lg-6 offset-lg-3">
+                <div class="card">
+                    <div class="card-body">
+    
+                                    <div id="crystal-container">
+                                        <!-- <img id="Crystal0" src="assets/images/crystal-0.png">
+                                        <img id="Crystal1" src="assets/images/crystal-1.png">
+                                        <img id="Crystal2" src="assets/images/crystal-2.png">
+                                        <img id="Crystal3" src="assets/images/crystal-3.png"> -->
 
+                                    </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+
+
 
     <!-- container for wins -->
     <div class="winsContainer">
