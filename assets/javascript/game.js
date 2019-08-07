@@ -41,7 +41,7 @@ $(document).ready(function() {
     // console.log("Crystal 1 value is " + crystal1Value)
     // console.log("Crystal 2 value is " + crystal2Value)
     // console.log("Crystal 3 value is " + crystal3Value)
-    
+
     // function to set goalNumber to a random value between 19 and 120
     function setGoal() {
         return Math.floor(Math.random() * (120 - 19) + 19); 
@@ -65,6 +65,19 @@ $(document).ready(function() {
     };
 
     demCrystals();
+
+    $(".crystal-image").hover(
+        function() { $(this).addClass("animated pulse") },
+        function() { $(this).removeClass("animated pulse")}    
+    );
+
+    // $(".crystal-image").hover(function() {
+    //     // var crystalImage = $("<img>");
+
+    //     $("<img>").addClass("animated pulse")
+    //     $("#crystal-container").append($("<img>"));
+
+    // });
 
 
     function reset() {

@@ -3,11 +3,35 @@
     background-size: cover;
 }
 
+body {
+    line-height: 1.25;
+}
+
 .crystal-image {
     margin: 2px;
-    width: 24%;
+    width: 23%;
 }
 
 .my-margin {
     margin-top: 2%;
 }
+
+.card-header {
+    padding: .5rem .5rem;
+}
+
+.card-body {
+    padding: .5rem;
+}
+
+/* .animated:hover {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.pulse:hover {
+    -webkit-animation-name: pulse;
+    animation-name: pulse;
+} */
