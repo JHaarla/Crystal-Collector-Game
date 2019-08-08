@@ -66,7 +66,10 @@ $(document).ready(function() {
 
 
     // animation effect for the crystal images on hover
-    $(".crystal-image").hover(
+    // $("#crystal-container").on("click", ".crystal-image", function(){
+
+        //$(".crystal-image").hover(
+        $(".crystal-image").hover(
         function() { $(this).addClass("animated pulse") },
         function() { $(this).removeClass("animated pulse")}    
     );
@@ -81,52 +84,15 @@ $(document).ready(function() {
 
 // __________reset section - it's a mess in here ________________________
 
-    function reset() { //OG__________________________
-        // crystal0Value = setCrystal0();
-        // crystal1Value = setCrystal1();
-        // crystal2Value = setCrystal2();
-        // crystal3Value = setCrystal3();
-        // setCrystal();
+    // function reset() { //OG__________________________
+    //     // crystal0Value = setCrystal0();
+    //     // crystal1Value = setCrystal1();
+    //     // crystal2Value = setCrystal2();
+    //     // crystal3Value = setCrystal3();
+    //     // setCrystal();
 
-        // crystalValues = [setCrystal(), setCrystal(), setCrystal(), setCrystal()];
-        // crystalImage.attr("crystal-value-data", crystalValues[i]);
-
-        yourTotal = 0;
-        totalNumberText.text(yourTotal);
-
-        goalNumber = setGoal();
-        goalNumberText.text(goalNumber);
-
-        console.log("reset goal: " + goalNumber);
-        crystalValues = [setCrystal(), setCrystal(), setCrystal(), setCrystal()];
-
-        // for (var i = 0; i < crystalValues.length; i++) {
-        //     var crystalImage = $("<img>");
-        
-        //     crystalImage.addClass("crystal-image");
-        //     crystalImage.attr("src", ("assets/images/crystal-" + [i] + ".png"));
-        //     crystalImage.attr("crystal-value-data", crystalValues[i]);
-        //     $("#crystal-container").append(crystalImage);
-        // }
-        demCrystals();
-        
-    };
-
-
-    // function reset() { //V2____________________________
-
-    //     crystalValues = [setCrystal(), setCrystal(), setCrystal(), setCrystal()];
-       
-    //     $("#crystal-container").empty();
-
-    //     for (var i = 0; i < crystalValues.length; i++) {
-
-    //         var crystalImage = $("<img>");
-    //         crystalImage.addClass("crystal-image");
-    //         crystalImage.attr("src", ("assets/images/crystal-" + [i] + ".png"));
-    //         crystalImage.attr("crystal-value-data", crystalValues[i]);
-    //         $("#crystal-container").append(crystalImage);
-    //     }
+    //     // crystalValues = [setCrystal(), setCrystal(), setCrystal(), setCrystal()];
+    //     // crystalImage.attr("crystal-value-data", crystalValues[i]);
 
     //     yourTotal = 0;
     //     totalNumberText.text(yourTotal);
@@ -135,18 +101,62 @@ $(document).ready(function() {
     //     goalNumberText.text(goalNumber);
 
     //     console.log("reset goal: " + goalNumber);
+    //     crystalValues = [setCrystal(), setCrystal(), setCrystal(), setCrystal()];
+
+    //     // for (var i = 0; i < crystalValues.length; i++) {
+    //     //     var crystalImage = $("<img>");
+        
+    //     //     crystalImage.addClass("crystal-image");
+    //     //     crystalImage.attr("src", ("assets/images/crystal-" + [i] + ".png"));
+    //     //     crystalImage.attr("crystal-value-data", crystalValues[i]);
+    //     //     $("#crystal-container").append(crystalImage);
+    //     // }
+    //     demCrystals();
         
     // };
 
 
+    function reset() { //V2____________________________
+
+        crystalValues = [setCrystal(), setCrystal(), setCrystal(), setCrystal()];
+       
+        $("#crystal-container").empty();
+
+        for (var i = 0; i < crystalValues.length; i++) {
+
+            var crystalImage = $("<img>");
+            crystalImage.addClass("crystal-image");
+            crystalImage.attr("src", ("assets/images/crystal-" + [i] + ".png"));
+            crystalImage.attr("crystal-value-data", crystalValues[i]);
+            $("#crystal-container").append(crystalImage);
+        }
+
+        yourTotal = 0;
+        totalNumberText.text(yourTotal);
+
+        goalNumber = setGoal();
+        goalNumberText.text(goalNumber);
+
+        console.log("reset goal: " + goalNumber);
+        
+    };
 
 
+
+// $("img").on("click", function() {
+//     console.log("new click: ");
+// })
 
 // __________ end of reset section ________________________
 
 
     // click event to trigger the next action(s). Also, this event listens to ALL crystals on the page (because they all have the same class...)
-    $(".crystal-image").on("click", function(){
+    
+    
+     // $(".crystal-image").on("click", function(){
+        $("#crystal-container").on("click", ".crystal-image", function(){
+
+    
         //
         var crystalValue = ($(this).attr("crystal-value-data"));
         crystalValue = parseInt(crystalValue);
@@ -198,3 +208,4 @@ $(document).ready(function() {
 
 
 }); // *fin* do not delete
+
