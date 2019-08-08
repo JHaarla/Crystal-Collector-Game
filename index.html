@@ -19,7 +19,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link href="https://fonts.googleapis.com/css?family=Bungee+Shade&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="assets/css/stylesheet.css" type="text/css" charset="utf-8" />
 </head>
 <body class="pagebg text-center">
 
@@ -27,10 +27,13 @@
     <div class="container my-margin">   
         <div class="row">   
             <div class="col-sm-8 offset-sm-2">
-                <div class="card my-transparency">
+                <div class="card my-transparency" id="gradient-bg">
                     <div class="card-body">
-                        <div class="title rainbow" id="gradient-bg">
-                            <h1>Crystal Collector</h1>
+                        <div class="title">
+                            <h1 id="myFont" class="myFontStyle">Crystal Collector</h1>
+                            <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#exampleModalCenter">
+                                    Click for Instructions
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -38,13 +41,24 @@
         </div>  
     </div>   
 
-    <!-- container for instructions -->
+    <!-- container/modal for instructions -->
 
-<!-- Button trigger modal -->
-        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter">
-        Click for Instructions
-        </button>
-      
+    <!-- Button trigger modal -->
+
+    <!-- <div class ="container">
+        <div class = "row">
+            <div class="col-sm-8 offset-sm-2">
+                <div class="card my-transparency">
+                    <div class="card-body">
+                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter">
+                        Click for Instructions
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
       <!-- Modal -->
       <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
