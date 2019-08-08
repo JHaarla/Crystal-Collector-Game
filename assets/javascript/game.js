@@ -65,14 +65,13 @@ $(document).ready(function() {
     demCrystals();
 
 
-    // animation effect for the crystal images on hover
-    // $("#crystal-container").on("click", ".crystal-image", function(){
+    // animation effect for the crystal images on mouseenter (don't use hover - deprecated)
+        $("#crystal-container").on("mouseenter", ".crystal-image", function() { 
+            $(this).addClass("animated pulse") });
 
-        //$(".crystal-image").hover(
-        $(".crystal-image").hover(
-        function() { $(this).addClass("animated pulse") },
-        function() { $(this).removeClass("animated pulse")}    
-    );
+        $("#crystal-container").on("mouseleave", ".crystal-image", function() { 
+            $(this).removeClass("animated pulse") });  
+
 
     // $(".crystal-image").hover(function() {
     //     // var crystalImage = $("<img>");
