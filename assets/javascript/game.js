@@ -1,17 +1,5 @@
 $(document).ready(function() {
 
-    // var crystal0Value = setCrystal0();
-    // var crystal1Value = setCrystal1();
-    // var crystal2Value = setCrystal2();
-    // var crystal3Value = setCrystal3();
-
-    // var goalNumber = setGoal();
-
-    // var crystal0Value;
-    // var crystal1Value;
-    // var crystal2Value;
-    // var crystal3Value;
-
     var goalNumber = setGoal();
     var yourTotal = 0;
 
@@ -34,11 +22,7 @@ $(document).ready(function() {
     totalNumberText.text(yourTotal);
 
 
-    console.log("goalNumber= " + goalNumber);
-    // console.log("Crystal 0 value is " + crystal0Value)
-    // console.log("Crystal 1 value is " + crystal1Value)
-    // console.log("Crystal 2 value is " + crystal2Value)
-    // console.log("Crystal 3 value is " + crystal3Value)
+    // console.log("goalNumber= " + goalNumber);
 
     // function to set goalNumber to a random value between 19 and 120
     function setGoal() {
@@ -73,49 +57,8 @@ $(document).ready(function() {
             $(this).removeClass("animated pulse") });  
 
 
-    // $(".crystal-image").hover(function() {
-    //     // var crystalImage = $("<img>");
-
-    //     $("<img>").addClass("animated pulse")
-    //     $("#crystal-container").append($("<img>"));
-
-    // });
-
-// __________reset section - it's a mess in here ________________________
-
-    // function reset() { //OG__________________________
-    //     // crystal0Value = setCrystal0();
-    //     // crystal1Value = setCrystal1();
-    //     // crystal2Value = setCrystal2();
-    //     // crystal3Value = setCrystal3();
-    //     // setCrystal();
-
-    //     // crystalValues = [setCrystal(), setCrystal(), setCrystal(), setCrystal()];
-    //     // crystalImage.attr("crystal-value-data", crystalValues[i]);
-
-    //     yourTotal = 0;
-    //     totalNumberText.text(yourTotal);
-
-    //     goalNumber = setGoal();
-    //     goalNumberText.text(goalNumber);
-
-    //     console.log("reset goal: " + goalNumber);
-    //     crystalValues = [setCrystal(), setCrystal(), setCrystal(), setCrystal()];
-
-    //     // for (var i = 0; i < crystalValues.length; i++) {
-    //     //     var crystalImage = $("<img>");
-        
-    //     //     crystalImage.addClass("crystal-image");
-    //     //     crystalImage.attr("src", ("assets/images/crystal-" + [i] + ".png"));
-    //     //     crystalImage.attr("crystal-value-data", crystalValues[i]);
-    //     //     $("#crystal-container").append(crystalImage);
-    //     // }
-    //     demCrystals();
-        
-    // };
-
-
-    function reset() { //V2____________________________
+    // reset function - picks and sets new random values for crystals, kills old crystals & puts new crystals in place, new random goal generated, total reset to 0
+    function reset() { 
 
         crystalValues = [setCrystal(), setCrystal(), setCrystal(), setCrystal()];
        
@@ -136,31 +79,16 @@ $(document).ready(function() {
         goalNumber = setGoal();
         goalNumberText.text(goalNumber);
 
-        console.log("reset goal: " + goalNumber);
-        
+        // console.log("reset goal: " + goalNumber);  
     };
-
-
-
-// $("img").on("click", function() {
-//     console.log("new click: ");
-// })
-
-// __________ end of reset section ________________________
-
 
     // click event to trigger the next action(s). Also, this event listens to ALL crystals on the page (because they all have the same class...)
     
-    
-     // $(".crystal-image").on("click", function(){
+     // $(".crystal-image").on("click", function(){ this way didn't work - had to use the below line (syntax for event delegation)
         $("#crystal-container").on("click", ".crystal-image", function(){
-
-    
-        //
         var crystalValue = ($(this).attr("crystal-value-data"));
         crystalValue = parseInt(crystalValue);
         console.log("clicked crystal Value= " + crystalValue);
-        //
         yourTotal += crystalValue;
         console.log("your Total= " + yourTotal);
         $("#yourTotal").text(yourTotal);
@@ -178,33 +106,4 @@ $(document).ready(function() {
         };
         });
 
-
-
-
-    // function to set crystal values between 1 and 12
-    // function setCrystal0() {
-        // return Math.floor(Math.random() * (12 - 1) + 1); 
-    // };
-    // console.log("Crystal 0 value is " + crystal0Value)
-
-    // function setCrystal1() {
-        // return Math.floor(Math.random() * (12 - 1) + 1); 
-    // };
-    // console.log("Crystal 1 value is " + crystal1Value)
-
-    // function setCrystal2() {
-    //     return Math.floor(Math.random() * (12 - 1) + 1); 
-    // };
-    // console.log("Crystal 2 value is " + crystal2Value)
-
-    // function setCrystal3() {
-    //     return Math.floor(Math.random() * (12 - 1) + 1); 
-    // };
-    // console.log("Crystal 3 value is " + crystal3Value)
-
-
-    // reset function - runs at the beginning and every time the player wins or loses
-
-
 }); // *fin* do not delete
-

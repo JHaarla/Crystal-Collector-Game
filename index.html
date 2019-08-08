@@ -19,6 +19,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link href="https://fonts.googleapis.com/css?family=Bungee+Shade&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8" />
 </head>
 <body class="pagebg text-center">
 
@@ -28,9 +29,9 @@
             <div class="col-sm-8 offset-sm-2">
                 <div class="card my-transparency">
                     <div class="card-body">
-                                <div class="title rainbow" id="gradient-bg">
-                                    <h1>Crystal Collector</h1>
-                                </div>
+                        <div class="title rainbow" id="gradient-bg">
+                            <h1>Crystal Collector</h1>
+                        </div>
                     </div>
                 </div>
             </div> 
@@ -38,7 +39,39 @@
     </div>   
 
     <!-- container for instructions -->
-    <div class="container">   
+
+<!-- Button trigger modal -->
+        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter">
+        Click for Instructions
+        </button>
+      
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Instructions</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <p>You will be given a random number at the start of the game.</p>
+                <p>There are four crystals below. By clicking on a crystal, you will add a specific amount of points to your total.</p>
+                <p>You win the game by matching your total score to the given goal number. You lose if your total goes over the the goal number.</p>
+                <p>The value of each crystal is hidden from you until you click on it.</p>
+                <p>Each time the game starts, a new goal number is given and the value of the crystals will change!</p>
+                <p><strong>Good Luck!!</strong></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Play</button>
+              <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- <div class="container">   
         <div class="row">   
             <div class="col-sm-8 offset-sm-2">
                 <div class="card my-transparency">
@@ -46,24 +79,22 @@
     
                         <div class="instructions-container">
                             <button type="button" class="btn btn-success" data-toggle="collapse" data-target="#collapseThis">Show/Hide Instructions</button>
-                                <div id="collapseThis" class="collapse show"> 
-                                <!-- <div> -->
-                                    <h3>Instructions</h3>
-                                    <p>You will be given a random number at the start of the game.</p>
-                                    <p>There are four crystals below. By clicking on a crystal, you will add a specific amount of points to your total.</p>
-                                    <p>You win the game by matching your total score to the given goal number. You lose if your total goes over the the goal number.</p>
-                                    <p>The value of each crystal is hidden from you until you click on it.</p>
-                                    <p>Each time the game starts, a new goal number is given and the value of the crystals will change!</p>
-                                    <p><strong>Good Luck!!</strong></p>
-                                </div>
-                                
-                            
+                            <div id="collapseThis" class="collapse show">  -->
+                            <!-- <div> -->
+                                <!-- <h3>Instructions</h3>
+                                <p>You will be given a random number at the start of the game.</p>
+                                <p>There are four crystals below. By clicking on a crystal, you will add a specific amount of points to your total.</p>
+                                <p>You win the game by matching your total score to the given goal number. You lose if your total goes over the the goal number.</p>
+                                <p>The value of each crystal is hidden from you until you click on it.</p>
+                                <p>Each time the game starts, a new goal number is given and the value of the crystals will change!</p>
+                                <p><strong>Good Luck!!</strong></p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div> 
         </div>  
-    </div>   
+    </div>    -->
         
 
     <!-- Container for the Goal Number -->
@@ -101,15 +132,8 @@
             <div class="col-sm-8 offset-sm-2">
                 <div class="card my-transparency">
                     <div class="card-body">
-    
-                                    <div id="crystal-container">
-                                        <!-- <img id="Crystal0" src="assets/images/crystal-0.png">
-                                        <img id="Crystal1" src="assets/images/crystal-1.png">
-                                        <img id="Crystal2" src="assets/images/crystal-2.png">
-                                        <img id="Crystal3" src="assets/images/crystal-3.png"> -->
-
-                                    </div>
-
+                        <div id="crystal-container">
+                        </div>
                     </div>
                 </div>
             </div>
