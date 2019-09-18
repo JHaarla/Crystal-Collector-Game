@@ -3,6 +3,8 @@
 
 Match the crystal values to the target value. The crystal values are hidden so you'll have to do a little math to come up with the winning strategy. Don't go over & bust! Will you take home the crystals or go bust?
 
+Live deployment: https://jhaarla.github.io/Crystal-Collector-Game/
+
 **_Under the Hood_**
 This game was an exercise to learn how jQuery works. There are quite a few jQuery elements that make this game work properly:
 * Basics - There are the simple/basic jQuery/JS things like setting variables, arrays, and console logging to make sure everything is working properly.
